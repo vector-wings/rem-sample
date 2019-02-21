@@ -14,13 +14,12 @@
         color: #FFCDCE;
         margin-right: px2rem(20px);
         line-height: px2rem(40px);
-        &:nth-child(2){
-            color: #FFFFFF;
-            font-size: px2rem(17px);
-        }
     }
-    .header-item:hover {
-        color:  #FFFFFF;
+    .header-item-hover {
+        float: left;
+        margin-right: px2rem(20px);
+        line-height: px2rem(40px);
+        color: #FFFFFF;
         font-size: px2rem(17px);
     }
 }

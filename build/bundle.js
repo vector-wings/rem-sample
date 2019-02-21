@@ -85,6 +85,28 @@ let htmlDom = document.getElementsByTagName('html')[0];
 // 设置html的font-size
 htmlDom.style.fontSize = htmlWidth / 10 + 'px';
 
+let headerItems = document.getElementsByTagName('ul')[0].getElementsByTagName('li');
+headerItems[1].className = 'header-item-hover';
+
+
+for(let i = 0; i < 6; i++) {
+    headerItems[i].onmouseover = function() {
+        headerItems[i].className = 'header-item-hover';
+        for(let j = 0; j < 6; j++) {
+            if (i !== j) {
+                headerItems[j].className = 'header-item';
+            }
+        }
+    }
+
+    headerItems[i].onmouseout = function() {
+        headerItems[i].className = 'header-item';
+    }
+}
+
+
+
+
 window.addEventListener('resize', (e) => {
     let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
     htmlDom.style.fontSize = htmlWidth / 10 + 'px';
@@ -150,7 +172,7 @@ var urlEscape = __webpack_require__(5);
 var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(6));
 
 // Module
-exports.push([module.i, ".header {\n  height: 1.06667rem;\n  width: 100%;\n  background-color: red;\n  padding-left: 0.61333rem; }\n  .header .header-item {\n    float: left;\n    font-size: 0.42667rem;\n    color: #FFCDCE;\n    margin-right: 0.53333rem;\n    line-height: 1.06667rem; }\n    .header .header-item:nth-child(2) {\n      color: #FFFFFF;\n      font-size: 0.45333rem; }\n  .header .header-item:hover {\n    color: #FFFFFF;\n    font-size: 0.45333rem; }\n\n.banner-content {\n  position: relative; }\n  .banner-content .banner {\n    display: block;\n    width: 100%;\n    height: 5.06667rem; }\n  .banner-content .banner-title {\n    position: absolute;\n    left: 0.4rem;\n    bottom: 0.4rem;\n    font-size: 0.42667rem;\n    color: #FFFFFF; }\n\n.news-content .news-item {\n  width: 100%;\n  height: 2.4rem;\n  padding-left: 0.4rem;\n  padding-right: 0.4rem;\n  box-sizing: border-box; }\n\n.news-content .item-inner {\n  position: relative;\n  overflow: hidden;\n  height: 100%;\n  border-bottom: 0.02667rem solid #E5E5E5; }\n\n.news-content .news-img {\n  float: left;\n  display: block;\n  margin-top: 0.26667rem;\n  margin-right: 0.4rem;\n  width: 2.53333rem;\n  height: 1.86667rem; }\n\n.news-content .news-title {\n  color: #404040;\n  font-size: 0.37333rem;\n  margin-top: 0.42667rem;\n  line-height: 0.48rem; }\n\n.news-content .time {\n  position: absolute;\n  left: 2.8rem;\n  bottom: 0.45333rem;\n  color: #888888;\n  font-size: 0.32rem; }\n\n.news-content .num {\n  position: absolute;\n  color: #888888;\n  font-size: 0.32rem;\n  right: 0.10667rem;\n  bottom: 0.45333rem; }\n  .news-content .num:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 0.34667rem;\n    height: 0.34667rem;\n    background-size: contain;\n    top: 0rem;\n    left: -0.45333rem;\n    background-image: url(" + ___CSS_LOADER_URL___0___ + "); }\n", ""]);
+exports.push([module.i, ".header {\n  height: 1.06667rem;\n  width: 100%;\n  background-color: red;\n  padding-left: 0.61333rem; }\n  .header .header-item {\n    float: left;\n    font-size: 0.42667rem;\n    color: #FFCDCE;\n    margin-right: 0.53333rem;\n    line-height: 1.06667rem; }\n  .header .header-item-hover {\n    float: left;\n    margin-right: 0.53333rem;\n    line-height: 1.06667rem;\n    color: #FFFFFF;\n    font-size: 0.45333rem; }\n\n.banner-content {\n  position: relative; }\n  .banner-content .banner {\n    display: block;\n    width: 100%;\n    height: 5.06667rem; }\n  .banner-content .banner-title {\n    position: absolute;\n    left: 0.4rem;\n    bottom: 0.4rem;\n    font-size: 0.42667rem;\n    color: #FFFFFF; }\n\n.news-content .news-item {\n  width: 100%;\n  height: 2.4rem;\n  padding-left: 0.4rem;\n  padding-right: 0.4rem;\n  box-sizing: border-box; }\n\n.news-content .item-inner {\n  position: relative;\n  overflow: hidden;\n  height: 100%;\n  border-bottom: 0.02667rem solid #E5E5E5; }\n\n.news-content .news-img {\n  float: left;\n  display: block;\n  margin-top: 0.26667rem;\n  margin-right: 0.4rem;\n  width: 2.53333rem;\n  height: 1.86667rem; }\n\n.news-content .news-title {\n  color: #404040;\n  font-size: 0.37333rem;\n  margin-top: 0.42667rem;\n  line-height: 0.48rem; }\n\n.news-content .time {\n  position: absolute;\n  left: 2.8rem;\n  bottom: 0.45333rem;\n  color: #888888;\n  font-size: 0.32rem; }\n\n.news-content .num {\n  position: absolute;\n  color: #888888;\n  font-size: 0.32rem;\n  right: 0.10667rem;\n  bottom: 0.45333rem; }\n  .news-content .num:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 0.34667rem;\n    height: 0.34667rem;\n    background-size: contain;\n    top: 0rem;\n    left: -0.45333rem;\n    background-image: url(" + ___CSS_LOADER_URL___0___ + "); }\n", ""]);
 
 
 
