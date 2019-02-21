@@ -1,0 +1,102 @@
+@function px2rem($px) {
+    $rem: 37.5px;
+    @return ($px / $rem) + rem;
+}
+
+.header {
+    height: px2rem(40px);
+    width: 100%;
+    background-color: red;
+    padding-left: px2rem(23px);
+    .header-item {
+        float: left;
+        font-size: px2rem(16px);
+        color: #FFCDCE;
+        margin-right: px2rem(20px);
+        line-height: px2rem(40px);
+        &:nth-child(2){
+            color: #FFFFFF;
+            font-size: px2rem(17px);
+        }
+    }
+    .header-item:hover {
+        color:  #FFFFFF;
+        font-size: px2rem(17px);
+    }
+}
+
+
+
+
+.banner-content {
+    position: relative; // 为了使 banner-title 根据 banner-content 进行绝对定位
+     .banner {
+        display: block;
+        width: 100%;
+        height: px2rem(190px);  
+    }
+    .banner-title {
+        position: absolute;
+        left: px2rem(15px);
+        bottom: px2rem(15px);
+        font-size: px2rem(16px);
+        color: #FFFFFF
+    }
+}
+
+.news-content {
+    .news-item {
+        width: 100%;
+        height: px2rem(90px);
+        padding-left: px2rem(15px);
+        padding-right: px2rem(15px);
+        box-sizing: border-box;
+    }
+    .item-inner {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        border-bottom: px2rem(1px) solid #E5E5E5;
+    }
+    .news-img {
+        float: left;
+        display: block;
+        margin-top: px2rem(10px);
+        margin-right: px2rem(15px);
+        width: px2rem(95px);
+        height: px2rem(70px);
+    }
+    .news-title {
+        color: #404040;
+        font-size: px2rem(14px);
+        margin-top: px2rem(16px);
+        line-height: px2rem(18px);
+    }
+    .time {
+        position: absolute;
+        left: px2rem(105px);
+        bottom: px2rem(17px);
+        color: #888888;
+        font-size: px2rem(12px);
+    }
+    .num {
+        position: absolute;
+        color: #888888;
+        font-size: px2rem(12px);
+        right: px2rem(4px);
+        bottom: px2rem(17px);
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: px2rem(13px);
+            height: px2rem(13px);
+            background-size: contain;
+            top: px2rem(0px);
+            left: px2rem(-17px);
+            background-image: url(./images/reading.png);
+        }
+    }
+}
+
